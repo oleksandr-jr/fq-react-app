@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import ListCoursesComponent from './ListCoursesComponent';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {Route, HashRouter, Switch } from "react-router-dom";
+
 import CourseComponent from './CourseComponent';
 
 class InstructorApp extends Component {
     render() {
         return (
-            <Router>
+            <HashRouter>
                 <>
                     <h1>JavaRush Instructor Application</h1>
                     <Switch>
@@ -15,7 +17,7 @@ class InstructorApp extends Component {
                         <Route path="/courses/:id" component={CourseComponent} />
                     </Switch>
                 </>
-            </Router>
+            </HashRouter>
         )
     }
 }
